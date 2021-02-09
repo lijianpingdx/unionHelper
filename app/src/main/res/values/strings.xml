@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Dax联盟助手</string>
+    <string name="start_record">开始统计</string>
+    <string name="end_record">结束统计</string>
+    <string name="read_record">读取结果</string>
+    <string name="push_record">上传结果</string>
+    <string name="action_settings">Settings</string>
+</resources>

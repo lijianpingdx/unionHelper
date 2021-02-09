@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <!--            <EditText-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="80dp"-->
+<!--                android:layout_marginTop="350dp"-->
+<!--                android:layout_gravity="top"-->
+<!--                android:id="@+id/cmdView"-->
+<!--                android:singleLine="false"-->
+<!--                android:inputType="textMultiLine"-->
+<!--                android:visibility="invisible"-->
+<!--                />-->
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="320dp"
+    android:background="@drawable/biankuang"
+    >
+</LinearLayout>
+
+
+
+
+<!--            android:layout_gravity="center_vertical|center_horizontal"-->
+
+    <TextView
+        android:id="@+id/textMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginTop="-300dp"
+
+
+        android:inputType="textMultiLine" />
+
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+
+
+
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/bHuntManager"
+        android:layout_width="250sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:text="猎魔管理"
+                android:textSize="20sp" />
+
+
+    <Button
+        android:id="@+id/bStoreManager"
+        android:layout_width="250sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginTop="200dp"
+        android:text="仓库管理"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/bMemberManager"
+        android:layout_width="250sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:text="成员管理"
+        android:textSize="20sp" />
+
+
+    <Button
+        android:id="@+id/bStoreDelete"
+        android:layout_width="250sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginTop="400dp"
+        android:text="清空仓库数据"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/bHuntDelete"
+        android:layout_width="250sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginTop="500dp"
+        android:text="清空猎魔数据"
+        android:textSize="20sp" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
