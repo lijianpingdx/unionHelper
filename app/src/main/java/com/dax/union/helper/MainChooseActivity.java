@@ -76,10 +76,10 @@ public class MainChooseActivity extends AppCompatActivity {
             "!!注意：猎魔统计是在开礼包的时候统计!!\n" +
             "!!注意：仓库统计是在运输完成的时候统计!!\n" +
             "使用建议:\n"+
-            "建议顶号的时候不要开箱，暂不支持批量开箱\n"+
+            "建议顶号的时候不要开箱\n"+
             "顶号的时候玩家的运输不会被记录，请自行处理\n\n"+
             "问题反馈/更新/建议 QQ592254266\n\n"+
-            "当前版本v1.0\n";
+            "当前版本v1.1\n";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -178,8 +178,8 @@ public class MainChooseActivity extends AppCompatActivity {
 
 
     public void showReg(final String userId){
-        ClipboardManager clipboardManager=(ClipboardManager)getSystemService(Context.CLIPBOARD_SERVICE);
-        clipboardManager.setPrimaryClip(ClipData.newPlainText("code",userId));
+//        ClipboardManager clipboardManager=(ClipboardManager)getSystemService(Context.CLIPBOARD_SERVICE);
+//        clipboardManager.setPrimaryClip(ClipData.newPlainText("code",userId));
         final EditText inputServer = new EditText(this);
         inputServer.setFocusable(true);
         final AlertDialog.Builder builder = new AlertDialog.Builder(this);

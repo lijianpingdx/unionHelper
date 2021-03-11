@@ -134,6 +134,10 @@ public class MainActivity extends AppCompatActivity {
         dataMap.put(2855, "啊库克苏");
 
         dataMap.put(2865, "怪怪屋");
+        dataMap.put(2880, "玛鲁巴顿");
+
+
+
 
 
         List<Integer> keys = new ArrayList<Integer>();
@@ -281,14 +285,14 @@ public class MainActivity extends AppCompatActivity {
     public static void readInputStream(String storagePath, InputStream inputStream) {
         File file = new File(storagePath);
         try {
-            if (!file.exists()) {
+
                 // 1.建立通道对象
                 FileOutputStream fos = new FileOutputStream(file);
                 // 2.定义存储空间biru我
                 byte[] buffer = new byte[inputStream.available()];
                 // 3.开始读文件
                 int lenght = 0;
-                while ((lenght = inputStream.read(buffer)) != -1) {// 循环从输入流读取buffer字节
+                while ((lenght = inputStream.read(buffer        )) != -1) {// 循环从输入流读取buffer字节
                     // 将Buffer中的数据写到outputStream对象中
                     fos.write(buffer, 0, lenght);
                 }
@@ -296,7 +300,7 @@ public class MainActivity extends AppCompatActivity {
                 // 4.关闭流
                 fos.close();
                 inputStream.close();
-            }
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -481,10 +485,11 @@ public class MainActivity extends AppCompatActivity {
                     String cronPath=path+"/"+"cron";
                     copyFilesFromRaw(R.raw.daxrecorder,fileName,path);
                     String recordPath=path+"/"+recordName;
+                    String pid=path+"/"+"program.pid";
                     String storePath=path+"/"+storeRecordName;
                     final String runCaptor="chmod 777 "+fullPath+" \n" +
                             "chmod 777 "+scriptPath+" \n"+
-                            "nohup "+fullPath+" "+ip+" "+recordPath+" "+storePath+" >/dev/null 2>&1 &\n";
+                            "nohup "+fullPath+" "+ip+" "+recordPath+" "+storePath+" "+pid+" >/dev/null 2>&1 &\n";
                     String checkScriptStr="#!/system/bin/sh\n" +
                             "\n" +
                             "if [ -n \"$(pgrep daxrecorder)\" ]\n" +
@@ -506,7 +511,7 @@ public class MainActivity extends AppCompatActivity {
                     final String finalCmd=runCaptor+addCron;
 
                     //new AlertDialog.Builder(MainActivity.this).setTitle("hhh").setMessage(finalCmd).setPositiveButton(msg+getFilesDir().toString(),null).show();
-                    SystemManager.RootCommand(finalCmd,false);
+                    SystemManager.RootCommand(finalCmd,true);
                     checkStatus();
                 }catch(Throwable e){
                     msg = e.getMessage();
